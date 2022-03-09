@@ -117,4 +117,39 @@ def normalizeVector(x):
     return normalizedVector, vectorMaxLocation, normalizedVectorMaxLocation
 
 
-print(normalizeVector([1, 5, 2, 3]))
+# print(normalizeVector(randomVector()))
+
+
+def standardizeVector(x):
+    if (len(x) == 0):
+        return False
+    mean = vectorData(x)[0]
+    sd = vectorData(x)[1]
+    standardizedVector = []
+    i = 0
+    while (i < len(x)):
+        standardizedVector.append((x[i] - mean) / sd)
+        i = i + 1
+    standardizedVectorMean = vectorData(standardizedVector)[0]
+    standardizedVectorSd = vectorData(standardizedVector)[1]
+    return standardizedVector, standardizedVectorMean, standardizedVectorSd
+
+
+# print(standardizeVector(randomVector()))
+
+def discretizeVector(x):
+    if (len(x) == 0):
+        return False
+    discretizedVector = []
+    i = 0
+    while (i < len(x)):
+        if (x[i] > 90):
+            discretizedVector.append("[90, 100]")
+        else:
+            discretizedVector.append(
+                "[" + str(int(x[i]/10) * 10) + " " + str(int(x[i]/10) * 10 + 10) + ")")
+        i = i + 1
+    return discretizedVector
+
+
+# print(discretizeVector(randomVector()))
