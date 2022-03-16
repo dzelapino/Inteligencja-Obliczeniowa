@@ -24,12 +24,12 @@ def fitness_func(solution, solution_idx):
 
 fitness_function = fitness_func
 
-sol_per_pop = 10
+sol_per_pop = 15
 num_genes = len(S)
 
 num_parents_mating = 4
 num_generations = 30
-keep_parents = 1
+keep_parents = 2
 
 parent_selection_type = "sss"
 
@@ -51,5 +51,15 @@ ga_instance = pygad.GA(gene_space=gene_space,
                        mutation_percent_genes=mutation_percent_genes)
 
 ga_instance.run()
+
+
+solution, solution_fitness, solution_idx = ga_instance.best_solution()
+
+value = 0
+for (i, v) in enumerate(solution):
+    if v == 1:
+        value = value + S[i][1]
+        print(S[i][0])
+print(value)
 
 ga_instance.plot_fitness()
