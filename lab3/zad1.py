@@ -1,6 +1,7 @@
 import pygad
 import numpy
 import time
+import pandas as pd
 
 S = [1, 2, 3, 6, 10, 17, 25, 29, 30, 41, 51, 60, 70, 79, 80]
 
@@ -47,40 +48,29 @@ mutation_type = "random"
 mutation_percent_genes = 8
 
 # inicjacja algorytmu z powyzszymi parametrami wpisanymi w atrybuty
-ga_instance = pygad.GA(gene_space=gene_space,
-                       num_generations=num_generations,
-                       num_parents_mating=num_parents_mating,
-                       fitness_func=fitness_function,
-                       sol_per_pop=sol_per_pop,
-                       num_genes=num_genes,
-                       parent_selection_type=parent_selection_type,
-                       keep_parents=keep_parents,
-                       crossover_type=crossover_type,
-                       mutation_type=mutation_type,
-                       mutation_percent_genes=mutation_percent_genes,
-                       stop_criteria=["reach_0", "saturate_30"])
-
-# uruchomienie algorytmu
+results = []
 i = 0
 while i < 10:
+    ga_instance = pygad.GA(gene_space=gene_space,
+                           num_generations=num_generations,
+                           num_parents_mating=num_parents_mating,
+                           fitness_func=fitness_function,
+                           sol_per_pop=sol_per_pop,
+                           num_genes=num_genes,
+                           parent_selection_type=parent_selection_type,
+                           keep_parents=keep_parents,
+                           crossover_type=crossover_type,
+                           mutation_type=mutation_type,
+                           mutation_percent_genes=mutation_percent_genes,
+                           stop_criteria=["reach_0", "saturate_30"])
     start = time.time()
     ga_instance.run()
     end = time.time()
-    with open('results.csv', 'a') as fd:
-        fd.write(str(end - start))
+    results.append(end - start)
     i = i + 1
-    ga_instance.plot_fitness()
+    solution, solution_fitness, solution_idx = ga_instance.best_solution()
+    if ga_instance.best_solution_generation != -1:
+        print("Ilość pokoleń: {best_solution_generation} ".format(
+            best_solution_generation=ga_instance.best_solution_generation))
 
-# podsumowanie: najlepsze znalezione rozwiazanie (chromosom+ocena)
-solution, solution_fitness, solution_idx = ga_instance.best_solution()
-print("Parameters of the best solution : {solution}".format(solution=solution))
-print("Fitness value of the best solution = {solution_fitness}".format(
-    solution_fitness=solution_fitness))
-
-# tutaj dodatkowo wyswietlamy sume wskazana przez jedynki
-prediction = numpy.sum(S*solution)
-print("Predicted output based on the best solution : {prediction}".format(
-    prediction=prediction))
-
-# wyswietlenie wykresu: jak zmieniala sie ocena na przestrzeni pokolen
-ga_instance.plot_fitness()
+print("Średni czas: " + str(numpy.mean(results)))
