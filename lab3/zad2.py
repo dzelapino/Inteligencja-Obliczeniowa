@@ -13,6 +13,7 @@ gene_space = numpy.arange(0.00, 0.99, 0.01)
 
 
 def fitness_func(solution, solution_idx):
+    print(solution[0])
     result = endurance(solution[0], solution[1], solution[2],
                        solution[3], solution[4], solution[5])
     return result
