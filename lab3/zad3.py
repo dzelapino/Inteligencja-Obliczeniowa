@@ -3,22 +3,8 @@ import pygad
 import numpy
 import os
 import random
+import time
 
-# def showMatrix(matrix, solution):
-#     matrixCopy = matrix[:]
-#     os.system('clear')
-#     draw = ''
-#     for row in matrixCopy:
-#         for item in row:
-#             item = str(item).replace('1', ' ')
-#             item = str(item).replace('0', '█')
-#             draw += item
-#         draw += '\n'
-#     print(draw)
-
-# showMatrix(matrix, [])
-
-# gene_space = numpy.array(1, 11)
 gene_space = numpy.arange(1, 5, 1)
 
 
@@ -103,9 +89,10 @@ ga_instance = pygad.GA(gene_space=gene_space,
                        mutation_type=mutation_type,
                        mutation_percent_genes=mutation_percent_genes,
                        stop_criteria=["reach_0", "saturate_200"])
-
+# start = time.time()
 ga_instance.run()
-
+# end = time.time()
+# print("time: " + str(end - start))
 
 solution, solution_fitness, solution_idx = ga_instance.best_solution()
 
