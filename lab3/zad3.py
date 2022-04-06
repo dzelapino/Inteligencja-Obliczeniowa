@@ -67,7 +67,7 @@ sol_per_pop = 60
 num_genes = 30
 
 num_parents_mating = 8
-num_generations = 200
+num_generations = 1000
 keep_parents = 4
 
 parent_selection_type = "sss"
@@ -88,11 +88,12 @@ ga_instance = pygad.GA(gene_space=gene_space,
                        crossover_type=crossover_type,
                        mutation_type=mutation_type,
                        mutation_percent_genes=mutation_percent_genes,
-                       stop_criteria=["reach_0", "saturate_200"])
-# start = time.time()
+                       stop_criteria=["reach_0", "saturate_1000"])
+
+start = time.time()
 ga_instance.run()
-# end = time.time()
-# print("time: " + str(end - start))
+end = time.time()
+print("time: " + str(end - start))
 
 solution, solution_fitness, solution_idx = ga_instance.best_solution()
 
