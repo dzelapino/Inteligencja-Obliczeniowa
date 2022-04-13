@@ -98,6 +98,9 @@ print("time: " + str(end - start))
 solution, solution_fitness, solution_idx = ga_instance.best_solution()
 
 print(solution)
+print("_______")
+print(solution_fitness)
+print("---------------")
 
 ga_instance.plot_fitness()
 
