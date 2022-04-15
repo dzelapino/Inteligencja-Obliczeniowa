@@ -4,10 +4,16 @@ import collections
 import numpy
 import os
 from collections import deque
+import cv2
 
 #   SOLVING MAZES
 
 size = 20
+
+
+def countDistance(a, b):
+    distance = sqrt((size-a-1)**2 + (size-b-1)**2)
+    return distance
 
 
 def solveMaze(maze):
@@ -24,7 +30,7 @@ def solveMaze(maze):
         visited[coord[0]][coord[1]] = True
 
         if maze[coord[0]][coord[1]] == 3:
-            return 100
+            return 0
 
         for dir in directions:
             nr, nc = coord[0]+dir[0], coord[1]+dir[1]
@@ -32,14 +38,14 @@ def solveMaze(maze):
                 continue
             queue.appendleft((nr, nc, coord[2]+1))
 
-    return -10
+    return -countDistance(coord[0], coord[1])
 
 # COUNTING ZEROS AND ONES IN MAZE
 
 
 def countZerosAndOnes(maze):
     zerosAndOnes = collections.Counter(maze)
-    result = 10 * abs(zerosAndOnes[0] - zerosAndOnes[1])
+    result = size * abs(zerosAndOnes[0] - zerosAndOnes[1])
     return result
 
 #   GENERATING MAZES
@@ -64,9 +70,9 @@ fitness_function = fitness_func
 sol_per_pop = 120
 num_genes = size**2
 
-num_parents_mating = 5
-num_generations = 60
-keep_parents = 4
+num_parents_mating = 10
+num_generations = 300
+keep_parents = 6
 
 parent_selection_type = "sss"
 
@@ -86,22 +92,16 @@ ga_instance = pygad.GA(gene_space=gene_space,
                        crossover_type=crossover_type,
                        mutation_type=mutation_type,
                        mutation_percent_genes=mutation_percent_genes,
-                       stop_criteria=["reach_10", "saturate_1000"])
+                       stop_criteria=["reach_0", "saturate_1000"])
 
 ga_instance.run()
 
 solution, solution_fitness, solution_idx = ga_instance.best_solution()
 ga_instance.plot_fitness()
-print(solution)
 
 
 # PRINTING SOLUTION MAZE
+mazeSolution = solution * 70
+maze = numpy.reshape(mazeSolution, (size, size))
 
-lenght = len(solution)
-z = 0
-while (z < lenght):
-    if (z % size == 0):
-        print("\n" + str(solution[z]), end='')
-    else:
-        print(solution[z], end='')
-    z = z + 1
+im_g = cv2.imwrite("GeneratedMaze.jpg", maze)
