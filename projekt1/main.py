@@ -10,8 +10,6 @@ from rednerSolutionImage import *
 size = getSize()
 
 
-#   GENERATING MAZES
-
 gene_space = numpy.arange(0, 1.1, dtype=int)
 
 
@@ -27,6 +25,7 @@ def fitness_func(solution, solution_idx):
     # verticalWalls = rewardForVerticalWalls(maze)
     fitness = countResult + \
         solveResult[0] - clusters/size + solveResult[2]/(size/2)
+    # fitness = solveResult[0] + verticalWalls
     # fitness = solveResult[0]*1000 + solveResult[1] + countResult * 1000
     return fitness
 
