@@ -22,9 +22,10 @@ def fitness_func(solution):
     clusters = countClustersOfOnes(maze)
     # horizontalWalls = rewardForHorizontalWalls(maze)
     # verticalWalls = rewardForVerticalWalls(maze)
+    # CORRECT FITNESS
     fitness = countResult + \
         solveResult[0] - clusters/size + solveResult[2]/(size/2)
-    # fitness = solveResult[0]*1000 + solveResult[1] + countResult * 1000
+    # END OF CORRECT FITNESS
     return -fitness
 
 
@@ -37,9 +38,9 @@ def f(x):
     return numpy.array(j)
 
 
-optimizer = ps.discrete.BinaryPSO(n_particles=size, dimensions=size**2,
+optimizer = ps.discrete.BinaryPSO(n_particles=20, dimensions=size**2,
                                   options=options)
-cost, pos = optimizer.optimize(f, iters=900, verbose=True)
+cost, pos = optimizer.optimize(f, iters=500, verbose=True)
 cost_history = optimizer.cost_history
 plot_cost_history(cost_history)
 plt.show()

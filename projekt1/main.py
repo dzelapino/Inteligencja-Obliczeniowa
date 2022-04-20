@@ -23,10 +23,10 @@ def fitness_func(solution, solution_idx):
     clusters = countClustersOfOnes(maze)
     # horizontalWalls = rewardForHorizontalWalls(maze)
     # verticalWalls = rewardForVerticalWalls(maze)
+    # CORRECT FITNESS
     fitness = countResult + \
         solveResult[0] - clusters/size + solveResult[2]/(size/2)
-    # fitness = solveResult[0] + verticalWalls
-    # fitness = solveResult[0]*1000 + solveResult[1] + countResult * 1000
+    # END OF CORRECT FITNESS
     return fitness
 
 
