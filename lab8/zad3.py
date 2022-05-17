@@ -34,6 +34,8 @@ for i in train_set:
 scaler.fit(X_train)
 X_train = scaler.transform(X_train)
 X_test = scaler.transform(X_test)
+y_train_oh = pd.get_dummies(y_train)
+y_test_oh = pd.get_dummies(y_test)
 
 print("4-2-1")
 
@@ -65,7 +67,13 @@ print(accuracy_score(predictions_train, y_train))
 predictions_test = mlp.predict(X_test)
 print(accuracy_score(predictions_test, y_test))
 
-# print(confusion_matrix(predictions_train, y_train))
-#
-# print(confusion_matrix(predictions_test, y_test))
+print("4-3-3")
+
+mlp = MLPClassifier(hidden_layer_sizes=(3), max_iter=5000)
+mlp.fit(X_train, y_train_oh)
+
+predictions_train = mlp.predict(X_train)
+print(accuracy_score(predictions_train, y_train_oh))
+predictions_test = mlp.predict(X_test)
+print(accuracy_score(predictions_test, y_test_oh))
 
