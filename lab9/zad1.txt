@@ -1,0 +1,3 @@
+To find diamonds in Minecraft, you'll need to dig down to at least layer 15 with an iron pickaxe or better.
+You can see what layer you're on by opening the debug menu or by changing your settings.
+Diamonds can be used to craft some of the best weapons and armor in all of Minecraft.
