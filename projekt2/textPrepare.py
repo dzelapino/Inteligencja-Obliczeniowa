@@ -49,46 +49,40 @@ while iterator < len(scenarioLines) - 8:
     peterScript = peterScript + getPersonLines("PETER")
     iterator = iterator + 1
 
-# print(lisaScript)
-# print(johnnyScript)
-# print(markScript)
-print(dialogTest)
 
-# print(te.get_emotion(johnnyScript))
-# print(te.get_emotion(lisaScript))
+def extractEmotionsToFile(fileName, personScript):
+    personSentences = sent_tokenize(personScript)
+    # with open("emotionsTest.txt", "w") as resultFile:
+    with open(fileName+".csv", "w") as resultFile:
+        resultFile.write('Happy,Angry,Surprise,Sad,Fear')
+        for sentence in personSentences:
+            happy = 0
+            angry = 0
+            surprise = 0
+            sad = 0
+            fear = 0
+            result = te.get_emotion(sentence)
+            if result['Happy'] > 0:
+                happy = 1
+            if result['Angry'] > 0:
+                angry = 1
+            if result['Surprise'] > 0:
+                surprise = 1
+            if result['Sad'] > 0:
+                sad = 1
+            if result['Fear'] > 0:
+                fear = 1
+            resultFile.write(
+                '\n' + str(happy) + "," + str(angry) + "," + str(surprise) + "," + str(sad) + "," + str(fear))
+        resultFile.close()
 
 
-# def emotionsToFile(file, person):
+def createEmotionFiles():
+    extractEmotionsToFile("lisaEmotions", lisaScript)
+    extractEmotionsToFile("johnnyEmotions", johnnyScript)
+    extractEmotionsToFile("markEmotions", markScript)
+    extractEmotionsToFile("claudetteEmotions", claudetteScript)
+    extractEmotionsToFile("michelleEmotions", michelleScript)
+    extractEmotionsToFile("peterEmotions", peterScript)
 
-
-
-happy = 0
-angry = 0
-surprise = 0
-sad = 0
-fear = 0
-johnnySentences = sent_tokenize(johnnyScript)
-# print(johnnySentences)
-# for i in johnnySentences:
-#     print(te.get_emotion(i))
-    #'Happy': 0, 'Angry': 0, 'Surprise': 0, 'Sad': 0, 'Fear': 0}
-    # happy = happy + te.get_emotion(i)['Happy']
-    # angry = angry + te.get_emotion(i)['Angry']
-    # surprise = surprise + te.get_emotion(i)['Surprise']
-    # sad = sad + te.get_emotion(i)['Sad']
-    # fear = fear + te.get_emotion(i)['Fear']
-
-with open("emotionsTest.txt", "w") as resultFile:
-    resultFile.write('Happy,Angry,Surprise,Sad,Fear\n')
-    for sentence in johnnySentences:
-        print(sentence)
-        result = te.get_emotion(sentence)
-        print(result)
-        resultFile.write(str(result['Happy']) + "," + str(result['Angry']) + "," + str(result['Surprise']) + "," + str(result['Sad']) + "," + str(result['Fear']) + '\n')
-    resultFile.close()
-
-# print(str("{:.2f}".format(happy)))
-# print(str("{:.2f}".format(angry)))
-# print(str("{:.2f}".format(surprise)))
-# print(str("{:.2f}".format(sad)))
-# print(str("{:.2f}".format(fear)))
+# createEmotionFiles()
