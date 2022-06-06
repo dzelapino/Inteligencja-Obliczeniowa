@@ -10,7 +10,7 @@ df = pd.read_csv("diabetes.csv")
 
 # X = df[['sepallength', 'sepalwidth', "petallength", "petalwidth"]]
 # y = df['class']
-X = train_set[:, [0, 1, 2, 3, 4,5,6,7]]
+X = train_set[:, [0, 1, 2, 3, 4, 5, 6, 7]]
 y = train_set[:, [8]]
 
 clf = tree.DecisionTreeClassifier()
@@ -22,7 +22,7 @@ tree.plot_tree(clf)
 graph = graphviz.Source(dot_data)
 graph.render("diabetes")
 
-Xtest = test_set[:, [0, 1, 2, 3,4,5,6,7]]
+Xtest = test_set[:, [0, 1, 2, 3, 4, 5, 6, 7]]
 Ytest = test_set[:, [8]]
 print(clf.score(Xtest, Ytest))
 

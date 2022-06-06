@@ -33,9 +33,37 @@ def genPie(file, name):
     plt.savefig(name + 'sEmotionalPie.png')
     plt.clf()
 
+def genVaderPie(file, name):
+    i = 0
+    vaderneg = 0
+    vaderneu = 0
+    vaderpos = 0
+    while (i < len(file)):
+        vaderneg = vaderneg + file["VaderNeg"].values[i]
+        vaderneu = vaderneu + file["VaderNeu"].values[i]
+        vaderpos = vaderpos + file["VaderPos"].values[i]
+        i = i + 1
+    labels = 'Negative', 'Neutral', 'Positive'
+    sizes = [vaderneg, vaderneu,
+            vaderpos]
+    colors = ['lightblue', 'coral', 'purple']
+    explode = (0.2, 0.2, 0.2) 
+    plt.pie(sizes, explode=explode, labels=labels, colors=colors,
+            autopct='%1.1f%%', shadow=None, startangle=150)
+    plt.axis('equal')
+    plt.savefig(name + 'sVaderEmotionalPie.png')
+    plt.clf()
+
 genPie(claudette, "claudette")
 genPie(johnny, "johnny")
 genPie(lisa, "lisa")
 genPie(mark, "mark")
 genPie(michelle, "michelle")
 genPie(peter, "peter")
+
+genVaderPie(claudette, "claudette")
+genVaderPie(johnny, "johnny")
+genVaderPie(lisa, "lisa")
+genVaderPie(mark, "mark")
+genVaderPie(michelle, "michelle")
+genVaderPie(peter, "peter")

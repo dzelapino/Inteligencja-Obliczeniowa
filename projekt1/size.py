@@ -1,3 +1,3 @@
 def getSize():
-    size = 30
+    size = 10
     return size

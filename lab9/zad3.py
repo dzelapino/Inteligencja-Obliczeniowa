@@ -45,6 +45,7 @@ for sentence in tokenizedPositive:
     print(sentence)
     ss = sid.polarity_scores(sentence)
     for k in sorted(ss):
-        print('{0}: {1}, '.format(k, ss[k]), end='')
+        # print('{0}: {1}, '.format(k, ss[k]), end='')
+        print(k, ss[k])
     print("End of positive sentence")
     

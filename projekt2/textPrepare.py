@@ -1,5 +1,6 @@
 import text2emotion as te
 from nltk.tokenize import sent_tokenize
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 data = []
 
@@ -52,16 +53,20 @@ while iterator < len(scenarioLines) - 8:
 
 def extractEmotionsToFile(fileName, personScript):
     personSentences = sent_tokenize(personScript)
-    # with open("emotionsTest.txt", "w") as resultFile:
+    sid = SentimentIntensityAnalyzer()
     with open(fileName+".csv", "w") as resultFile:
-        resultFile.write('Happy,Angry,Surprise,Sad,Fear')
+        resultFile.write('Happy,Angry,Surprise,Sad,Fear,VaderNeg,VaderNeu,VaderPos')
         for sentence in personSentences:
             happy = 0
             angry = 0
             surprise = 0
             sad = 0
             fear = 0
+            vaderneg = 0
+            vaderneu = 0
+            vaderpos = 0
             result = te.get_emotion(sentence)
+            resultVader = sid.polarity_scores(sentence)
             if result['Happy'] > 0:
                 happy = 1
             if result['Angry'] > 0:
@@ -72,8 +77,14 @@ def extractEmotionsToFile(fileName, personScript):
                 sad = 1
             if result['Fear'] > 0:
                 fear = 1
+            if resultVader['neg'] > 0:
+                vaderneg = 1
+            if resultVader['neu'] > 0:
+                vaderneu = 1
+            if resultVader['pos'] > 0:
+                vaderpos = 1
             resultFile.write(
-                '\n' + str(happy) + "," + str(angry) + "," + str(surprise) + "," + str(sad) + "," + str(fear))
+                '\n' + str(happy) + "," + str(angry) + "," + str(surprise) + "," + str(sad) + "," + str(fear) + "," + str(vaderneg) + "," + str(vaderneu) + "," + str(vaderpos))
         resultFile.close()
 
 
@@ -84,5 +95,6 @@ def createEmotionFiles():
     extractEmotionsToFile("claudetteEmotions", claudetteScript)
     extractEmotionsToFile("michelleEmotions", michelleScript)
     extractEmotionsToFile("peterEmotions", peterScript)
+
 
 # createEmotionFiles()

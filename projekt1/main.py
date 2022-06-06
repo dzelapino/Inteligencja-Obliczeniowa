@@ -36,7 +36,7 @@ sol_per_pop = 100
 num_genes = size**2
 
 num_parents_mating = 10
-num_generations = 300
+num_generations = 100
 keep_parents = 6
 
 parent_selection_type = "sss"

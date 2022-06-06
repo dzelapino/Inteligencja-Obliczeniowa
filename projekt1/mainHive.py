@@ -40,7 +40,7 @@ def f(x):
 
 optimizer = ps.discrete.BinaryPSO(n_particles=20, dimensions=size**2,
                                   options=options)
-cost, pos = optimizer.optimize(f, iters=500, verbose=True)
+cost, pos = optimizer.optimize(f, iters=1000, verbose=True)
 cost_history = optimizer.cost_history
 plot_cost_history(cost_history)
 plt.show()
