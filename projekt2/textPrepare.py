@@ -1,6 +1,9 @@
 import text2emotion as te
+import pandas as pd
+import plotly.express as px
 from nltk.tokenize import sent_tokenize
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+from nrclex import NRCLex
 
 data = []
 
@@ -98,3 +101,35 @@ def createEmotionFiles():
 
 
 # createEmotionFiles()
+
+
+def detectEmotionsWithNRC(fileName, personScript):
+    nrcResult = NRCLex(personScript)
+    nrcRawData = nrcResult.raw_emotion_scores
+    # nrcFreqData = nrcResult.affect_frequencies
+    # print(nrcFreqData)
+
+    print(nrcResult.affect_dict)
+    affect_df = pd.DataFrame.from_dict(nrcResult.affect_dict, orient='index')
+    print(affect_df)
+
+    emotion_df = pd.DataFrame.from_dict(nrcRawData, orient='index')
+    emotion_df = emotion_df.reset_index()
+    emotion_df = emotion_df.rename(columns={'index': 'Emotion Classification', 0: 'Emotion Count'})
+    emotion_df = emotion_df.sort_values(by=['Emotion Count'], ascending=False)
+    fig = px.bar(emotion_df, x='Emotion Count', y='Emotion Classification', color='Emotion Classification',
+                 orientation='h', width=800, height=400)
+    fig.write_image(fileName + "NrcImage.png")
+    fig.show()
+
+
+def createNRCPictures():
+    detectEmotionsWithNRC("lisa", lisaScript)
+    detectEmotionsWithNRC("johnny", johnnyScript)
+    detectEmotionsWithNRC("mark", markScript)
+    detectEmotionsWithNRC("claudette", claudetteScript)
+    detectEmotionsWithNRC("michelle", michelleScript)
+    detectEmotionsWithNRC("peter", peterScript)
+
+
+# createNRCPictures()

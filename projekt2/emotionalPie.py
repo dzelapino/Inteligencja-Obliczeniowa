@@ -8,6 +8,7 @@ mark = pd.read_csv('markEmotions.csv')
 michelle = pd.read_csv('michelleEmotions.csv')
 peter = pd.read_csv('peterEmotions.csv')
 
+
 def genPie(file, name):
     i = 0
     happy = 0
@@ -15,7 +16,7 @@ def genPie(file, name):
     surprise = 0
     sad = 0
     fear = 0
-    while (i < len(file)):
+    while i < len(file):
         happy = happy + file["Happy"].values[i]
         angry = angry + file["Angry"].values[i]
         surprise = surprise + file["Surprise"].values[i]
@@ -24,14 +25,15 @@ def genPie(file, name):
         i = i + 1
     labels = 'Happy', 'Angry', 'Surprise', 'Sad', 'Fear'
     sizes = [happy, angry,
-            surprise, sad, fear]
+             surprise, sad, fear]
     colors = ['lightblue', 'coral', 'purple', 'gold', 'blue']
-    explode = (0.2, 0.2, 0.2, 0.2, 0.2) 
+    explode = (0.2, 0.2, 0.2, 0.2, 0.2)
     plt.pie(sizes, explode=explode, labels=labels, colors=colors,
             autopct='%1.1f%%', shadow=None, startangle=150)
     plt.axis('equal')
     plt.savefig(name + 'sEmotionalPie.png')
     plt.clf()
+
 
 def genVaderPie(file, name):
     i = 0
@@ -45,14 +47,15 @@ def genVaderPie(file, name):
         i = i + 1
     labels = 'Negative', 'Neutral', 'Positive'
     sizes = [vaderneg, vaderneu,
-            vaderpos]
+             vaderpos]
     colors = ['lightblue', 'coral', 'purple']
-    explode = (0.2, 0.2, 0.2) 
+    explode = (0.2, 0.2, 0.2)
     plt.pie(sizes, explode=explode, labels=labels, colors=colors,
             autopct='%1.1f%%', shadow=None, startangle=150)
     plt.axis('equal')
     plt.savefig(name + 'sVaderEmotionalPie.png')
     plt.clf()
+
 
 genPie(claudette, "claudette")
 genPie(johnny, "johnny")
