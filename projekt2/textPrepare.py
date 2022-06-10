@@ -4,6 +4,7 @@ import plotly.express as px
 from nltk.tokenize import sent_tokenize
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from nrclex import NRCLex
+from textblob import TextBlob
 
 data = []
 
@@ -58,7 +59,7 @@ def extractEmotionsToFile(fileName, personScript):
     personSentences = sent_tokenize(personScript)
     sid = SentimentIntensityAnalyzer()
     with open(fileName+".csv", "w") as resultFile:
-        resultFile.write('Happy,Angry,Surprise,Sad,Fear,VaderNeg,VaderNeu,VaderPos')
+        resultFile.write('Happy,Angry,Surprise,Sad,Fear,VaderNeg,VaderNeu,VaderPos,BlobNeg,BlobNeu,BlobPos')
         for sentence in personSentences:
             happy = 0
             angry = 0
@@ -68,8 +69,12 @@ def extractEmotionsToFile(fileName, personScript):
             vaderneg = 0
             vaderneu = 0
             vaderpos = 0
+            blobneg = 0
+            blobneu = 0
+            blobpos = 0
             result = te.get_emotion(sentence)
             resultVader = sid.polarity_scores(sentence)
+            blobSentence = TextBlob(sentence).sentiment.polarity
             if result['Happy'] > 0:
                 happy = 1
             if result['Angry'] > 0:
@@ -86,8 +91,16 @@ def extractEmotionsToFile(fileName, personScript):
                 vaderneu = 1
             if resultVader['pos'] > 0:
                 vaderpos = 1
+            if blobSentence > 0:
+                blobpos = 1
+            if blobSentence == 0:
+                blobneu = 1
+            if blobSentence < 0:
+                blobneg = 1
             resultFile.write(
-                '\n' + str(happy) + "," + str(angry) + "," + str(surprise) + "," + str(sad) + "," + str(fear) + "," + str(vaderneg) + "," + str(vaderneu) + "," + str(vaderpos))
+                '\n' + str(happy) + "," + str(angry) + "," + str(surprise) + "," + str(sad) + "," + str(fear) + ","
+                + str(vaderneg) + "," + str(vaderneu) + "," + str(vaderpos) + "," + str(blobneg)
+                + "," + str(blobneu) + "," + str(blobpos))
         resultFile.close()
 
 
@@ -100,14 +113,14 @@ def createEmotionFiles():
     extractEmotionsToFile("peterEmotions", peterScript)
 
 
-# createEmotionFiles()
+createEmotionFiles()
 
 
 def detectEmotionsWithNRC(fileName, personScript):
     nrcResult = NRCLex(personScript)
     nrcRawData = nrcResult.raw_emotion_scores
-    # nrcFreqData = nrcResult.affect_frequencies
-    # print(nrcFreqData)
+    nrcFreqData = nrcResult.affect_frequencies
+    print(nrcFreqData)
 
     print(nrcResult.affect_dict)
     affect_df = pd.DataFrame.from_dict(nrcResult.affect_dict, orient='index')
@@ -132,4 +145,4 @@ def createNRCPictures():
     detectEmotionsWithNRC("peter", peterScript)
 
 
-# createNRCPictures()
+createNRCPictures()

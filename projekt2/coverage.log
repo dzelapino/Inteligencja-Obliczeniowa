@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.5.29)  8 JUN 2022 19:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.5.29)  10 JUN 2022 10:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -235,195 +235,258 @@ zostaª napisany
 <lisasVaderEmotionalPie.png, id=15, 462.528pt x 346.896pt>
 File: lisasVaderEmotionalPie.png Graphic file (type png)
 <use lisasVaderEmotionalPie.png>
-Package pdftex.def Info: lisasVaderEmotionalPie.png  used on input line 33.
-(pdftex.def)             Requested size: 189.6871pt x 142.26378pt.
-<lisasEmotionalPie.png, id=17, 462.528pt x 346.896pt>
+Package pdftex.def Info: lisasVaderEmotionalPie.png  used on input line 35.
+(pdftex.def)             Requested size: 132.77461pt x 99.58464pt.
+<lisasBlobEmotionalPie.png, id=17, 462.528pt x 346.896pt>
+File: lisasBlobEmotionalPie.png Graphic file (type png)
+<use lisasBlobEmotionalPie.png>
+Package pdftex.def Info: lisasBlobEmotionalPie.png  used on input line 36.
+(pdftex.def)             Requested size: 132.77461pt x 99.58464pt.
+<lisasEmotionalPie.png, id=18, 462.528pt x 346.896pt>
 File: lisasEmotionalPie.png Graphic file (type png)
 <use lisasEmotionalPie.png>
-Package pdftex.def Info: lisasEmotionalPie.png  used on input line 34.
-(pdftex.def)             Requested size: 189.6871pt x 142.26378pt.
-<lisaNrcImage.png, id=18, 803.0pt x 401.5pt>
+Package pdftex.def Info: lisasEmotionalPie.png  used on input line 37.
+(pdftex.def)             Requested size: 132.77461pt x 99.58464pt.
+<lisaNrcImage.png, id=19, 803.0pt x 401.5pt>
 File: lisaNrcImage.png Graphic file (type png)
 <use lisaNrcImage.png>
-Package pdftex.def Info: lisaNrcImage.png  used on input line 35.
+Package pdftex.def Info: lisaNrcImage.png  used on input line 38.
 (pdftex.def)             Requested size: 483.69684pt x 241.85144pt.
 
-Overfull \hbox (93.69684pt too wide) in paragraph at lines 33--36
+Overfull \hbox (13.54482pt too wide) in paragraph at lines 35--39
+[] [] [] 
+ []
+
+
+Overfull \hbox (93.69684pt too wide) in paragraph at lines 35--39
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--36
+Underfull \hbox (badness 10000) in paragraph at lines 35--39
 
  []
 
 [3
 
- <./lisasVaderEmotionalPie.png> <./lisasEmotionalPie.png> <./lisaNrcImage.png>]
-<johnnysVaderEmotionalPie.png, id=25, 462.528pt x 346.896pt>
+ <./lisasVaderEmotionalPie.png> <./lisasBlobEmotionalPie.png> <./lisasEmotional
+Pie.png> <./lisaNrcImage.png>]
+<johnnysVaderEmotionalPie.png, id=27, 462.528pt x 346.896pt>
 File: johnnysVaderEmotionalPie.png Graphic file (type png)
 <use johnnysVaderEmotionalPie.png>
-Package pdftex.def Info: johnnysVaderEmotionalPie.png  used on input line 38.
-(pdftex.def)             Requested size: 189.6871pt x 142.26378pt.
-<johnnysEmotionalPie.png, id=26, 462.528pt x 346.896pt>
+Package pdftex.def Info: johnnysVaderEmotionalPie.png  used on input line 41.
+(pdftex.def)             Requested size: 132.77461pt x 99.58464pt.
+<johnnysBlobEmotionalPie.png, id=28, 462.528pt x 346.896pt>
+File: johnnysBlobEmotionalPie.png Graphic file (type png)
+<use johnnysBlobEmotionalPie.png>
+Package pdftex.def Info: johnnysBlobEmotionalPie.png  used on input line 42.
+(pdftex.def)             Requested size: 132.77461pt x 99.58464pt.
+<johnnysEmotionalPie.png, id=29, 462.528pt x 346.896pt>
 File: johnnysEmotionalPie.png Graphic file (type png)
 <use johnnysEmotionalPie.png>
-Package pdftex.def Info: johnnysEmotionalPie.png  used on input line 39.
-(pdftex.def)             Requested size: 189.6871pt x 142.26378pt.
-<johnnyNrcImage.png, id=27, 803.0pt x 401.5pt>
+Package pdftex.def Info: johnnysEmotionalPie.png  used on input line 43.
+(pdftex.def)             Requested size: 132.77461pt x 99.58464pt.
+<johnnyNrcImage.png, id=30, 803.0pt x 401.5pt>
 File: johnnyNrcImage.png Graphic file (type png)
 <use johnnyNrcImage.png>
-Package pdftex.def Info: johnnyNrcImage.png  used on input line 40.
+Package pdftex.def Info: johnnyNrcImage.png  used on input line 44.
 (pdftex.def)             Requested size: 483.69684pt x 241.85144pt.
 
-Overfull \hbox (93.69684pt too wide) in paragraph at lines 38--41
+Overfull \hbox (13.54482pt too wide) in paragraph at lines 41--45
+[] [] [] 
+ []
+
+
+Overfull \hbox (93.69684pt too wide) in paragraph at lines 41--45
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--41
+Underfull \hbox (badness 10000) in paragraph at lines 41--45
 
  []
 
 [4
 
- <./johnnysVaderEmotionalPie.png> <./johnnysEmotionalPie.png> <./johnnyNrcImage
-.png>]
-<marksVaderEmotionalPie.png, id=34, 462.528pt x 346.896pt>
+ <./johnnysVaderEmotionalPie.png> <./johnnysBlobEmotionalPie.png> <./johnnysEmo
+tionalPie.png> <./johnnyNrcImage.png>]
+<marksVaderEmotionalPie.png, id=38, 462.528pt x 346.896pt>
 File: marksVaderEmotionalPie.png Graphic file (type png)
 <use marksVaderEmotionalPie.png>
-Package pdftex.def Info: marksVaderEmotionalPie.png  used on input line 43.
-(pdftex.def)             Requested size: 189.6871pt x 142.26378pt.
-<marksEmotionalPie.png, id=35, 462.528pt x 346.896pt>
+Package pdftex.def Info: marksVaderEmotionalPie.png  used on input line 47.
+(pdftex.def)             Requested size: 132.77461pt x 99.58464pt.
+<marksBlobEmotionalPie.png, id=39, 462.528pt x 346.896pt>
+File: marksBlobEmotionalPie.png Graphic file (type png)
+<use marksBlobEmotionalPie.png>
+Package pdftex.def Info: marksBlobEmotionalPie.png  used on input line 48.
+(pdftex.def)             Requested size: 132.77461pt x 99.58464pt.
+<marksEmotionalPie.png, id=40, 462.528pt x 346.896pt>
 File: marksEmotionalPie.png Graphic file (type png)
 <use marksEmotionalPie.png>
-Package pdftex.def Info: marksEmotionalPie.png  used on input line 44.
-(pdftex.def)             Requested size: 189.6871pt x 142.26378pt.
-<markNrcImage.png, id=36, 803.0pt x 401.5pt>
+Package pdftex.def Info: marksEmotionalPie.png  used on input line 49.
+(pdftex.def)             Requested size: 132.77461pt x 99.58464pt.
+<markNrcImage.png, id=41, 803.0pt x 401.5pt>
 File: markNrcImage.png Graphic file (type png)
 <use markNrcImage.png>
-Package pdftex.def Info: markNrcImage.png  used on input line 45.
+Package pdftex.def Info: markNrcImage.png  used on input line 50.
 (pdftex.def)             Requested size: 483.69684pt x 241.85144pt.
 
-Overfull \hbox (93.69684pt too wide) in paragraph at lines 43--46
+Overfull \hbox (13.54482pt too wide) in paragraph at lines 47--51
+[] [] [] 
+ []
+
+
+Overfull \hbox (93.69684pt too wide) in paragraph at lines 47--51
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--46
+Underfull \hbox (badness 10000) in paragraph at lines 47--51
 
  []
 
 [5
 
- <./marksVaderEmotionalPie.png> <./marksEmotionalPie.png> <./markNrcImage.png>]
-<claudettesVaderEmotionalPie.png, id=43, 462.528pt x 346.896pt>
+ <./marksVaderEmotionalPie.png> <./marksBlobEmotionalPie.png> <./marksEmotional
+Pie.png> <./markNrcImage.png>]
+<claudettesVaderEmotionalPie.png, id=49, 462.528pt x 346.896pt>
 File: claudettesVaderEmotionalPie.png Graphic file (type png)
 <use claudettesVaderEmotionalPie.png>
-Package pdftex.def Info: claudettesVaderEmotionalPie.png  used on input line 48
+Package pdftex.def Info: claudettesVaderEmotionalPie.png  used on input line 53
 .
-(pdftex.def)             Requested size: 189.6871pt x 142.26378pt.
-<claudettesEmotionalPie.png, id=44, 462.528pt x 346.896pt>
+(pdftex.def)             Requested size: 132.77461pt x 99.58464pt.
+<claudettesBlobEmotionalPie.png, id=50, 462.528pt x 346.896pt>
+File: claudettesBlobEmotionalPie.png Graphic file (type png)
+<use claudettesBlobEmotionalPie.png>
+Package pdftex.def Info: claudettesBlobEmotionalPie.png  used on input line 54.
+
+(pdftex.def)             Requested size: 132.77461pt x 99.58464pt.
+<claudettesEmotionalPie.png, id=51, 462.528pt x 346.896pt>
 File: claudettesEmotionalPie.png Graphic file (type png)
 <use claudettesEmotionalPie.png>
-Package pdftex.def Info: claudettesEmotionalPie.png  used on input line 49.
-(pdftex.def)             Requested size: 189.6871pt x 142.26378pt.
-<claudetteNrcImage.png, id=45, 803.0pt x 401.5pt>
+Package pdftex.def Info: claudettesEmotionalPie.png  used on input line 55.
+(pdftex.def)             Requested size: 132.77461pt x 99.58464pt.
+<claudetteNrcImage.png, id=52, 803.0pt x 401.5pt>
 File: claudetteNrcImage.png Graphic file (type png)
 <use claudetteNrcImage.png>
-Package pdftex.def Info: claudetteNrcImage.png  used on input line 50.
+Package pdftex.def Info: claudetteNrcImage.png  used on input line 56.
 (pdftex.def)             Requested size: 483.69684pt x 241.85144pt.
 
-Overfull \hbox (93.69684pt too wide) in paragraph at lines 48--51
+Overfull \hbox (13.54482pt too wide) in paragraph at lines 53--57
+[] [] [] 
+ []
+
+
+Overfull \hbox (93.69684pt too wide) in paragraph at lines 53--57
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--51
+Underfull \hbox (badness 10000) in paragraph at lines 53--57
 
  []
 
 [6
 
- <./claudettesVaderEmotionalPie.png> <./claudettesEmotionalPie.png> <./claudett
-eNrcImage.png>]
-<michellesVaderEmotionalPie.png, id=52, 462.528pt x 346.896pt>
+ <./claudettesVaderEmotionalPie.png> <./claudettesBlobEmotionalPie.png> <./clau
+dettesEmotionalPie.png> <./claudetteNrcImage.png>]
+<michellesVaderEmotionalPie.png, id=60, 462.528pt x 346.896pt>
 File: michellesVaderEmotionalPie.png Graphic file (type png)
 <use michellesVaderEmotionalPie.png>
-Package pdftex.def Info: michellesVaderEmotionalPie.png  used on input line 53.
+Package pdftex.def Info: michellesVaderEmotionalPie.png  used on input line 59.
 
-(pdftex.def)             Requested size: 189.6871pt x 142.26378pt.
-<michellesEmotionalPie.png, id=53, 462.528pt x 346.896pt>
+(pdftex.def)             Requested size: 132.77461pt x 99.58464pt.
+<michellesBlobEmotionalPie.png, id=61, 462.528pt x 346.896pt>
+File: michellesBlobEmotionalPie.png Graphic file (type png)
+<use michellesBlobEmotionalPie.png>
+Package pdftex.def Info: michellesBlobEmotionalPie.png  used on input line 60.
+(pdftex.def)             Requested size: 132.77461pt x 99.58464pt.
+<michellesEmotionalPie.png, id=62, 462.528pt x 346.896pt>
 File: michellesEmotionalPie.png Graphic file (type png)
 <use michellesEmotionalPie.png>
-Package pdftex.def Info: michellesEmotionalPie.png  used on input line 54.
-(pdftex.def)             Requested size: 189.6871pt x 142.26378pt.
-<michelleNrcImage.png, id=54, 803.0pt x 401.5pt>
+Package pdftex.def Info: michellesEmotionalPie.png  used on input line 61.
+(pdftex.def)             Requested size: 132.77461pt x 99.58464pt.
+<michelleNrcImage.png, id=63, 803.0pt x 401.5pt>
 File: michelleNrcImage.png Graphic file (type png)
 <use michelleNrcImage.png>
-Package pdftex.def Info: michelleNrcImage.png  used on input line 55.
+Package pdftex.def Info: michelleNrcImage.png  used on input line 62.
 (pdftex.def)             Requested size: 483.69684pt x 241.85144pt.
 
-Overfull \hbox (93.69684pt too wide) in paragraph at lines 53--56
+Overfull \hbox (13.54482pt too wide) in paragraph at lines 59--63
+[] [] [] 
+ []
+
+
+Overfull \hbox (93.69684pt too wide) in paragraph at lines 59--63
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--56
+Underfull \hbox (badness 10000) in paragraph at lines 59--63
 
  []
 
 [7
 
- <./michellesVaderEmotionalPie.png> <./michellesEmotionalPie.png> <./michelleNr
-cImage.png>]
-<petersVaderEmotionalPie.png, id=62, 462.528pt x 346.896pt>
+ <./michellesVaderEmotionalPie.png> <./michellesBlobEmotionalPie.png> <./michel
+lesEmotionalPie.png> <./michelleNrcImage.png>]
+<petersVaderEmotionalPie.png, id=72, 462.528pt x 346.896pt>
 File: petersVaderEmotionalPie.png Graphic file (type png)
 <use petersVaderEmotionalPie.png>
-Package pdftex.def Info: petersVaderEmotionalPie.png  used on input line 58.
-(pdftex.def)             Requested size: 189.6871pt x 142.26378pt.
-<petersEmotionalPie.png, id=63, 462.528pt x 346.896pt>
+Package pdftex.def Info: petersVaderEmotionalPie.png  used on input line 65.
+(pdftex.def)             Requested size: 132.77461pt x 99.58464pt.
+<petersBlobEmotionalPie.png, id=73, 462.528pt x 346.896pt>
+File: petersBlobEmotionalPie.png Graphic file (type png)
+<use petersBlobEmotionalPie.png>
+Package pdftex.def Info: petersBlobEmotionalPie.png  used on input line 66.
+(pdftex.def)             Requested size: 132.77461pt x 99.58464pt.
+<petersEmotionalPie.png, id=74, 462.528pt x 346.896pt>
 File: petersEmotionalPie.png Graphic file (type png)
 <use petersEmotionalPie.png>
-Package pdftex.def Info: petersEmotionalPie.png  used on input line 59.
-(pdftex.def)             Requested size: 189.6871pt x 142.26378pt.
-<peterNrcImage.png, id=64, 803.0pt x 401.5pt>
+Package pdftex.def Info: petersEmotionalPie.png  used on input line 67.
+(pdftex.def)             Requested size: 132.77461pt x 99.58464pt.
+<peterNrcImage.png, id=75, 803.0pt x 401.5pt>
 File: peterNrcImage.png Graphic file (type png)
 <use peterNrcImage.png>
-Package pdftex.def Info: peterNrcImage.png  used on input line 60.
+Package pdftex.def Info: peterNrcImage.png  used on input line 68.
 (pdftex.def)             Requested size: 483.69684pt x 241.85144pt.
 
-Overfull \hbox (93.69684pt too wide) in paragraph at lines 58--61
+Overfull \hbox (13.54482pt too wide) in paragraph at lines 65--69
+[] [] [] 
+ []
+
+
+Overfull \hbox (93.69684pt too wide) in paragraph at lines 65--69
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--61
+Underfull \hbox (badness 10000) in paragraph at lines 65--69
 
  []
 
 [8
 
- <./petersVaderEmotionalPie.png> <./petersEmotionalPie.png> <./peterNrcImage.pn
-g>] (./coverage.aux) ) 
+ <./petersVaderEmotionalPie.png> <./petersBlobEmotionalPie.png> <./petersEmotio
+nalPie.png> <./peterNrcImage.png>] (./coverage.aux) ) 
 Here is how much of TeX's memory you used:
- 3465 strings out of 480247
- 54198 string characters out of 5896151
+ 3507 strings out of 480247
+ 55518 string characters out of 5896151
  328428 words of memory out of 5000000
- 21356 multiletter control sequences out of 15000+600000
+ 21392 multiletter control sequences out of 15000+600000
  476780 words of font info for 46 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  60i,6n,67p,273b,212s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/dzelapino/.texlive2021/texmf-var/fonts/pk/ljfour/
-jknappen/ec/ecbx1440.600pk> </home/dzelapino/.texlive2021/texmf-var/fonts/pk/lj
-four/jknappen/ec/ecrm1200.600pk> </home/dzelapino/.texlive2021/texmf-var/fonts/
-pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/dzelapino/.texlive2021/texmf-var/f
-onts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </home/dzelapino/.texlive2021/texmf-
-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk>
-Output written on coverage.pdf (8 pages, 465899 bytes).
+ </home/dzelapino/.texlive
+2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/dzelapino/.te
+xlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/dzelapin
+o/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/dze
+lapino/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </hom
+e/dzelapino/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk>
+Output written on coverage.pdf (8 pages, 554790 bytes).
 PDF statistics:
- 250 PDF objects out of 1000 (max. 8388607)
+ 266 PDF objects out of 1000 (max. 8388607)
  41 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 
