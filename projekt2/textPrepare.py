@@ -1,6 +1,12 @@
 import text2emotion as te
 import pandas as pd
 import plotly.express as px
+import matplotlib.pyplot as plt
+import string
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
+from nltk.stem.wordnet import WordNetLemmatizer
+from nltk.probability import FreqDist
 from nltk.tokenize import sent_tokenize
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from nrclex import NRCLex
@@ -113,7 +119,7 @@ def createEmotionFiles():
     extractEmotionsToFile("peterEmotions", peterScript)
 
 
-createEmotionFiles()
+# createEmotionFiles()
 
 
 def detectEmotionsWithNRC(fileName, personScript):
@@ -145,4 +151,46 @@ def createNRCPictures():
     detectEmotionsWithNRC("peter", peterScript)
 
 
-createNRCPictures()
+# createNRCPictures()
+
+
+def mostCommonWords(name, script):
+    stop_words = set(stopwords.words("english"))
+    punctuations = set(string.punctuation)
+
+    tokenized_script = word_tokenize(script)
+    # print(tokenized_script)
+    filtered_script = []
+    for w in tokenized_script:
+        if w not in stop_words and w not in punctuations:
+            filtered_script.append(w)
+
+    # print(filtered_script)
+    lem = WordNetLemmatizer()
+    lematized_script = []
+    for w in filtered_script:
+        lematized_script.append(lem.lemmatize(w, 'v'))
+
+    # print(lematized_script)
+    frequency_in_script = FreqDist(lematized_script)
+    plotData = frequency_in_script.most_common(10)
+    fig = plt.figure()
+    # ax = fig.add_axes([0,0,1,1]) to psuje opisy osi
+    ax = fig.add_subplot(111)
+    x_val = [x[0] for x in plotData]
+    y_val = [x[1] for x in plotData]
+    ax.bar(x_val, y_val)
+    plt.savefig(name + 'sMostCommonWords.png')
+    plt.clf()
+
+
+def generateMostCommonWordsPlots():
+    mostCommonWords("lisa", lisaScript)
+    mostCommonWords("johnny", johnnyScript)
+    mostCommonWords("mark", markScript)
+    mostCommonWords("claudette", claudetteScript)
+    mostCommonWords("michelle", michelleScript)
+    mostCommonWords("peter", peterScript)
+
+
+# generateMostCommonWordsPlots()
